@@ -5,6 +5,16 @@ body{
 }
 a {
   font-weight: 500;
-  color: #00483A;
+  color: #000000;
   text-decoration: inherit;
+}
+.cards-pages{
+  padding-top: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.cards-pages .cards{
+  display: flex;
 }
