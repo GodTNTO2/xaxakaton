@@ -1,0 +1,31 @@
+.navBar {
+    position: absolute;
+    width: -webkit-fill-available;
+    height: auto;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+}
+.navBar-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    align-items: center;
+}
+.navBar h1{
+    width: 25px;
+    height: auto;
+}
+.navBar-center{
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+.navBar-right{
+    font-size: 20px;
+    display: flex;
+    gap: 15px
+}
