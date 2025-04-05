@@ -1,10 +1,14 @@
 import './App.css'
+import React from 'react';
+import Router  from './Router'
+import { Provider } from 'react-redux';
 
 function App() {
  
   return (
     <>
-      
+
+        <Router />
     </>
   )
 }

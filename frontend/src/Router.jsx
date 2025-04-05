@@ -24,7 +24,7 @@ const Router = () => (
                 <Route element={<Chat />} path="/chats/:chatId" />
                 <Route element={<Startups />} path="/startups" />
                 <Route element={<Startup />} path="/startups/:startupsId" />
-                <Route element={<Home />} path="/iser/:userId" />
+                <Route element={<Home />} path="/user/:userId" />
                 <Route element={<Upload />} path="/upload" />
                 <Route element={<Offers />} path="/offers" />
                 <Route element={<Offer />} path="/offers/:offerId" />
