@@ -1,4 +1,4 @@
-// InvestmentData.js
+// Это тупо хардкод пока бэка нету, типо пример данных 
 
 const investmentData = [
   {

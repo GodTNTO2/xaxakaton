@@ -1,5 +1,5 @@
 import React from 'react';
-import investmentData from './InvestmentData'; // Импортируем данные
+import investmentData from './InvestmentData'; // Импортируем данные, я фиг знает как тут потом обращение будет к БД, надеюсь это легко переделать
 import './cards.css';
 import defImage from './placeholder.png';
 
@@ -11,7 +11,7 @@ function Investments() {
         {investmentData.map(investor => (
           <div key={investor.id} className="cards-tile">
             <img
-              src={investor.image || defImage} // Путь к изображению
+              src={investor.image || defImage}
               alt={investor.name}
               className="cards-image"
             />

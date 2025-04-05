@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import './Upload.css';
 
 function Upload() {
-  // Пример: роль определяется после авторизации (здесь просто для примера)
-  const userRole = 'investor'; // 'investor', 'offer', 'startup'
+  
+  const userRole = 'investor'; // 'investor', 'offer', 'startup', Тут надо как-то проверку прикручивать какая роль у пользователя
 
   const [formData, setFormData] = useState({});
 

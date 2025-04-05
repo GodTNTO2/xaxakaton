@@ -1,5 +1,5 @@
 import React from 'react';
-import startupsData from './startupsData';
+import startupsData from './startupsData'; // Импортируем данные, я фиг знает как тут потом обращение будет к БД, надеюсь это легко переделать
 import './cards.css';
 import defImage from './placeholder.png';
 
