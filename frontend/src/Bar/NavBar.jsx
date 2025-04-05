@@ -45,7 +45,12 @@ function NavBar() {
           </NavLink>
         </div>
         <div id='right'>
-
+          <NavLink
+              className={getClassName}
+              to="/auth"
+          >
+          Войти
+          </NavLink>
         </div>
       </div>
     </>

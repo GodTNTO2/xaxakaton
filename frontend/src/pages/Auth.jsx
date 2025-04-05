@@ -3,14 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import './Auth.css';
 
 function Auth() {
-  const [email, setEmail] = useState('');
+  const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
     // Здесь должна быть авторизация (API, проверка и т.п.)
-    if (email && password) {
+    if (login && password) {
       // Пример: переход к главной странице после логина
       navigate('/startups');
     } else {
@@ -24,10 +24,10 @@ function Auth() {
         <h2>Вход в Агентство инноваций</h2>
         <form onSubmit={handleLogin}>
           <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            type="login"
+            placeholder="Логин"
+            value={login}
+            onChange={(e) => setLogin(e.target.value)}
             required
           />
           <input
