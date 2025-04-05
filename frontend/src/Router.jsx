@@ -19,7 +19,7 @@ const Router = () => (
         <Routes>
             <Route element={<MainLayout />} path='/'>
                 <Route element={<MainPage />} path="/" />
-                <Route element={<Auth />} path="/auth" />
+                
                 <Route element={<Chats />} path='/chats/:userId' />
                 <Route element={<Chat />} path="/chats/:chatId" />
                 <Route element={<Startups />} path="/startups" />
@@ -31,6 +31,7 @@ const Router = () => (
                 <Route element={<Investments />} path="/investments" />
                 <Route element={<Investment />} path="/investments/:investmentId" />
             </Route>
+            <Route element={<Auth />} path="/auth" />
             <Route element={<MainPage />} path="*" />
         </Routes>
     </BrowserRouter>
