@@ -11,7 +11,5 @@ class User(RWModel, DateTimeModelMixin):
     username = Column(String, nullable=False)
     hashed_password = Column(String, nullable=False)
     is_active = Column(Boolean, default=True)
-    roles = Column(Enum(RoleEnum), nullable=False)  # enum для роли
-    favorite_id = Column(Integer, ForeignKey("favorite.id"))
     
     startups = relationship("Startup", back_populates="owner")
