@@ -7,7 +7,7 @@ function Startup() {
   return (
     <>
       <Model 
-        arrayData={startupsData}
+        arrayData={startupsData} type = "startup"
       />
     </>
   )

@@ -1,36 +1,36 @@
-// Это тупо хардкод пока бэка нету, типо пример данных 
+  // Это тупо хардкод пока бэка нету, типо пример данных 
 
 
-const startupsData = [
-    {
-      id: 1,
-      name: 'EcoTech Solutions',
-      description: 'Разработка технологий для переработки отходов.',
-      investment: '1 000 000 ₽',
-      image: ""
-    },
-    {
-      id: 2,
-      name: 'AI Health Innovations',
-      description: 'Использование искусственного интеллекта для диагностики заболеваний.',
-      investment: '500 000 ₽',
-      image: '',
-    },
-    {
-      id: 3,
-      name: '3D Printing Services',
-      description: 'Печать прототипов и мелкосерийное производство.',
-      investment: '300 000 ₽',
-      image: '',
-    },
-    {
-      id: 4,
-      name: 'Smart Home Solutions',
-      description: 'Разработка технологий для умного дома.',
-      investment: '2 000 000 ₽',
-      image: '',
-    },
-  ];
-  
-  export default startupsData;
-  
+  const startupsData = [
+      {
+        id: 1,
+        name: 'EcoTech Solutions',
+        description: 'Разработка технологий для переработки отходов.',
+        investment: '1 000 000 ₽',
+        image: ""
+      },
+      {
+        id: 2,
+        name: 'AI Health Innovations',
+        description: 'Использование искусственного интеллекта для диагностики заболеваний.',
+        investment: '500 000 ₽',
+        image: '',
+      },
+      {
+        id: 3,
+        name: '3D Printing Services',
+        description: 'Печать прототипов и мелкосерийное производство.',
+        investment: '300 000 ₽',
+        image: '',
+      },
+      {
+        id: 4,
+        name: 'Smart Home Solutions',
+        description: 'Разработка технологий для умного дома.',
+        investment: '2 000 000 ₽',
+        image: '',
+      },
+    ];
+    
+    export default startupsData;
+    

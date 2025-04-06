@@ -23,13 +23,13 @@ const Router = () => (
                 <Route element={<Chats />} path='/chats/:userId' />
                 <Route element={<Chat />} path="/chats/:chatId" />
                 <Route element={<Startups />} path="/startups" />
-                <Route element={<Startup />} path="/startups/:startupsId" />
+                <Route element={<Startup />} path="/startups/:id" />
                 <Route element={<Home />} path="/user/:userId" />
                 <Route element={<Upload />} path="/upload" />
                 <Route element={<Offers />} path="/offers" />
-                <Route element={<Offer />} path="/offers/:offerId" />
+                <Route element={<Offer />} path="/offers/:id" />
                 <Route element={<Investments />} path="/investments" />
-                <Route element={<Investment />} path="/investments/:investmentId" />
+                <Route element={<Investment />} path="/investments/:id" />
             </Route>
             <Route element={<Auth />} path="/auth" />
             <Route element={<Register />} path="/register" />
