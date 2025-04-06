@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from "react-router-dom"
 
-function Model({text ,arrayData}) {
+function Model({arrayData}) {
     const params = useParams()
     const prodId = params.id
 
@@ -11,7 +11,7 @@ function Model({text ,arrayData}) {
         <div>
             {arrayData?.[prodId-1].id}
             
-            {arrayData[prodId-1].description}
+            {arrayData?.[prodId-1].description}
         </div>
     </>
   )

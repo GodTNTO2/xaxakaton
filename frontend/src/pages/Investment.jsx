@@ -6,8 +6,7 @@ function Investment() {
  
   return (
     <>
-      <Model
-        params={'startupsId'}
+      <Model  
         arrayData={investmentData}
       />
     </>
