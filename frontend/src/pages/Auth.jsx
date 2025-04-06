@@ -24,8 +24,8 @@ function Auth() {
         <h2>Вход в Агентство инноваций</h2>
         <form onSubmit={handleLogin}>
           <input
-            type="login"
-            placeholder="Логин"
+            type="email"
+            placeholder="Почта"
             value={login}
             onChange={(e) => setLogin(e.target.value)}
             required

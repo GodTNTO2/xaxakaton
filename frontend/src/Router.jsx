@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import MainPage  from './pages/MainPage.jsx';
 import Auth  from './pages/Auth.jsx';
+import Register  from './pages/Register.jsx';
 import Chats  from './pages/Chats.jsx';
 import Chat  from './pages/Chat.jsx';
 import Startups  from './pages/Startups.jsx';
@@ -31,6 +32,7 @@ const Router = () => (
                 <Route element={<Investment />} path="/investments/:investmentId" />
             </Route>
             <Route element={<Auth />} path="/auth" />
+            <Route element={<Register />} path="/register" />
             <Route element={<MainPage />} path="*" />
         </Routes>
     </BrowserRouter>
