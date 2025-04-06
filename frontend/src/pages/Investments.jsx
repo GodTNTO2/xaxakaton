@@ -16,7 +16,7 @@ function Investments() {
               key={item.id}
               arrayData={item}
               cardName={'/investments/'}
-              cardText={"Предлагаемые инвестиции:"}
+              cardText={"Интересующие отрасли:"}
             />
           ))}
         </div>

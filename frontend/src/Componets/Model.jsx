@@ -27,7 +27,7 @@ function Model({ arrayData, type }) {
   } = data;
 
   return (
-    <div className="model-container">
+    <div className="model-container fade-in">
       <img
         src={image || defImage}
         alt={name}
