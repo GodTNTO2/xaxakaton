@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Register.css';
 
 function Register() {
@@ -7,10 +8,17 @@ function Register() {
   const [inviteCode, setInviteCode] = useState('');
   const [agreed, setAgreed] = useState(false);
 
+  const navigate = useNavigate();
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!agreed) return;
-    console.log('Регистрация:', { email, password, inviteCode });
+    console.log('Регистрация:', { email, password, inviteCode },
+    navigate('/startups')
+    );
+  };
+
   };
 
   return (
@@ -42,10 +50,11 @@ function Register() {
             <label>Инвайт-код</label>
             <input
               type="text"
-              placeholder="Введите ваш инвайт-код"
+
+              placeholder="Введите ваш инвайт-код (пока как задумка)"
               value={inviteCode}
               onChange={(e) => setInviteCode(e.target.value)}
-              required
+
             />
           </div>
           <div className="register-checkbox">

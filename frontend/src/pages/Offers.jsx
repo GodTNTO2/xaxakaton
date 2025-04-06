@@ -1,29 +1,27 @@
 import React from 'react';
 import offersData from './OffersData'; // Импортируем данные, я фиг знает как тут потом обращение будет к БД, надеюсь это легко переделать
-import './cards.css';
-import defImage from './placeholder.png';
+import Card from "../Componets/Card.jsx"
+import "./MainCards.css"
 
 function Offers() {
   return (
-    <div className="cards-page">
-      <h2 className="cards-title">Предложения услуг</h2>
-      <div className="cards-grid">
-        {offersData.map(offer => (
-          <div key={offer.id} className="cards-tile">
-            <img
-              src={offer.image || defImage}
-              alt={offer.name}
-              className="cards-image"
+    <>
+      <div className='cards-pages'>
+        <h1>
+          Предложения услуг
+        </h1>
+        <div className='cards'>
+          {offersData.map(item => (
+            <Card
+              key={item.id}
+              arrayData={item}
+              cardName={"/offers/"}
+              cardText={"Цена:"}
             />
-            <div className="cards-info">
-              <h3>{offer.name}</h3>
-              <p>{offer.description}</p>
-              <span className="price">Цена: {offer.price}</span>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

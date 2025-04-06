@@ -1,48 +1,46 @@
 /* это стили для файлов investments.jsx, startups.jsx & offers.jsx,
 ТУТ НАДО БЫ ЧТО-ТО С РАЗМЕРОМ КАРТОЧЕК СДЕЛАТЬ, А ТО ОНИ ОГРОМНЫЕ И НЕПРОПОРЦИОНАЛЬНЫЕ */
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #2a2a2a; /* Темный фон */
-    color: #fff; /* Белый текст */
-  }
-  
   .cards-page {
     padding: 40px;
-    background-color: #1d1d1d;
   }
-  
+
+
   .cards-title {
     text-align: center;
     font-size: 30px;
-    margin-bottom: 20px;
   }
   
   .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
-    gap: 60px;
+    display: flex;
+    height: 100%;
+    transition: ease 0.7s;
+  }
+  
+  .cards-grid:hover{
+    transition: ease 1s;
+    transform: scale(1.07);
   }
   
   .cards-tile {
-    background-color: #333;
+    background-color: #f8f8f8;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 4px 6px #a5a5a5;
     text-align: center;
   }
   
   .cards-image {
     width: 100%;
+    max-width: 280px;
     object-fit: cover;
     border-radius: 8px;
-    background-color: #444;
+    background-color: #ffffff;
   }
   
   .cards-info {
     margin-top: 15px;
+    width: 400px;
   }
   
   .cards-info h3 {
@@ -52,19 +50,19 @@ body {
   
   .cards-info p {
     font-size: 14px;
-    color: #ccc;
+    color: #000000;
     margin-bottom: 10px;
   }
   
   .investment {
     font-size: 16px;
-    color: #0066cc;
+    color: #5279a0;
   }
   
   .price {
     display: block;
-  font-size: 1rem;
-  color: #f0f0f0;
-  margin-top: 10px;
-  font-weight: bold;
+    font-size: 1rem;
+    color: #f0f0f0;
+    margin-top: 10px;
+    font-weight: bold;
   }
