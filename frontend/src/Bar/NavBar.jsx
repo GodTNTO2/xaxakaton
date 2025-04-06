@@ -1,11 +1,13 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux"
 import "./NavBar.css"
 
 const getClassName = ({ isActive }) => (isActive ? 'active' : 'static');
 
 function NavBar() {
-  const isAuth = true
+  const { jwtToken } = useSelector(state => state.jwtToken)
+  console.log(jwtToken)
   return (
     <>
       <nav className="navbar">
@@ -25,7 +27,7 @@ function NavBar() {
                   Чаты
                   </NavLink>
                 </li>
-                {!isAuth && <li>
+                {!jwtToken && <li>
                   <NavLink
                   className="auth"
                   to='/auth'
@@ -33,7 +35,7 @@ function NavBar() {
                   Авторизация
                   </NavLink>
                 </li>}
-                {isAuth && <li>
+                {jwtToken && <li>
                   <NavLink
                   className="auth"
                   to='/user/1'
