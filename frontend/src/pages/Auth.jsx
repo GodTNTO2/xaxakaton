@@ -49,6 +49,7 @@ function Auth() {
           />
           <button type="submit">Войти</button>
         </form>
+        <p>Нет аккаунта? <a href="/register">Создать!</a></p>
       </div>
     </div>
   );
