@@ -1,32 +1,41 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Auth.css';
+import { useDispatch, useSelector } from "react-redux";
+import {addJwtToken} from "../Redux/jwtTokenSlicer.js"
+
 
 function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-
-  const isReg = false
+  const { jwtToken } = useSelector(state => state.jwtToken)
+  const dispatch = useDispatch()
+  
+  const loginUser = async (user) => {
+  const response = await fetch("/auth", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/JSON"
+    },
+    body: JSON.stringify(user)
+  })
+  const data = await response.json();
+  if (data.user) {
+    await window.localStorage.setItem('token', JSON.stringify(data.token)) 
+    await dispatch(addJwtToken(data.token))
+  }}
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Здесь должна быть авторизация (API, проверка и т.п.)
-    if (login && password) {
-      // Пример: переход к главной странице после логина
+    if (email && password) {
+      loginUser(email)
       navigate('/startups');
     } else {
       alert('Введите логин и пароль');
     }
   };
 
-  if (isReg) {
-    return (
-      <>
-        <div>Hellow</div>
-      </>
-    )
-  }
 
   return (
     <div className="login-page">

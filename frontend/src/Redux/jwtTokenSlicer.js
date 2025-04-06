@@ -1,8 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-function jwtTokenGet() {
-    return true
+function pushJwtToken(jwtToken) {
+    const token = JSON.parse(window.localStorage.getItem("token"))
+    if (token) {
+        return token
+    }
+    
+    if (jwtToken){
+        window.localStorage.setItem('token', jwtToken) 
+        return jwtToken
+    }
+    
 }
+
 
 const jwtTokenSlicer = createSlice({
     name: 'jwtTokenSlicer',
@@ -11,17 +21,14 @@ const jwtTokenSlicer = createSlice({
     },
     reducers: {
         addJwtToken(state, action) {
-            state.jwtToken = jwtTokenGet()
+            state.jwtToken = pushJwtToken(action.payload)
         },
     },
    
 })
 
 export const {
-    addFavorite,
-    addPending,
-    deleteFavorite,
-    deletePending,
+    addJwtToken,
 } = jwtTokenSlicer.actions;
 
 export default jwtTokenSlicer.reducer;

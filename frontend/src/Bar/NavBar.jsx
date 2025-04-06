@@ -1,12 +1,22 @@
-import React from 'react';
+import React, {useEffect} from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux";
 import "./NavBar.css"
+import {addJwtToken} from "../Redux/jwtTokenSlicer.js"
 
 const getClassName = ({ isActive }) => (isActive ? 'active' : 'static');
 
 function NavBar() {
   const { jwtToken } = useSelector(state => state.jwtToken)
+  const dispatch = useDispatch()
+  
+  useEffect(() => {
+    const token = JSON.parse(window.localStorage.getItem("token"))
+    if (token) {
+        dispatch(addJwtToken(token))
+    }
+  }, [])
+
   console.log(jwtToken)
   return (
     <>
