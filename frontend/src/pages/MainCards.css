@@ -1,0 +1,14 @@
+.cards-pages{
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .cards-pages .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1520px;
+  }

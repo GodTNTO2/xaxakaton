@@ -19,16 +19,16 @@ const Router = () => (
         <Routes>
             <Route element={<MainLayout />} path='/'>
                 <Route element={<MainPage />} path="/" />
-                <Route element={<Chats />} path='/chats/:userId' />
-                <Route element={<Chat />} path="/chats/:chatId" />
+                <Route element={<Chats />} path='/chats/:id' />
+                <Route element={<Chat />} path="/chats/:id" />
                 <Route element={<Startups />} path="/startups" />
-                <Route element={<Startup />} path="/startups/:startupsId" />
-                <Route element={<Home />} path="/user/:userId" />
+                <Route element={<Startup />} path="/startups/:id" />
+                <Route element={<Home />} path="/user/:id" />
                 <Route element={<Upload />} path="/upload" />
                 <Route element={<Offers />} path="/offers" />
-                <Route element={<Offer />} path="/offers/:offerId" />
+                <Route element={<Offer />} path="/offers/:id" />
                 <Route element={<Investments />} path="/investments" />
-                <Route element={<Investment />} path="/investments/:investmentId" />
+                <Route element={<Investment />} path="/investments/:id" />
             </Route>
             <Route element={<Auth />} path="/auth" />
             <Route element={<MainPage />} path="*" />

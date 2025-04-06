@@ -7,6 +7,8 @@ function Auth() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  const isReg = false
+
   const handleLogin = (e) => {
     e.preventDefault();
     // Здесь должна быть авторизация (API, проверка и т.п.)
@@ -17,6 +19,14 @@ function Auth() {
       alert('Введите логин и пароль');
     }
   };
+
+  if (isReg) {
+    return (
+      <>
+        <div>Hellow</div>
+      </>
+    )
+  }
 
   return (
     <div className="login-page">

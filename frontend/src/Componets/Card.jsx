@@ -1,13 +1,19 @@
 import React from 'react';
 import './cards.css';
 import defImage from '../assets/placeholder.png';
+import { useNavigate } from 'react-router-dom';
 
 function Card({arrayData, cardName, cardText}) {
+  const navigate = useNavigate()
+  const pushOnClik = () => {
+      navigate(cardName + arrayData.id)
+  }
+
 
   return (
     <>
       <div className="cards-page">
-            <div className="cards-grid">
+            <div onClick={pushOnClik} className="cards-grid">
                 <div key={arrayData.id} className="cards-tile">
                   <img
                     src={arrayData.image || defImage}

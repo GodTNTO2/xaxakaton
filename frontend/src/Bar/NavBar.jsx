@@ -8,15 +8,15 @@ function NavBar() {
  
   return (
     <>
-      <nav class="navbar">
-        <div class="navbar-container container">
-            <input type="checkbox" name="" id=""/>
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
+      <nav className="navbar">
+        <div className="navbar-container container">
+            <input type="checkbox"/>
+            <div className="hamburger-lines">
+                <span className="line line1"></span>
+                <span className="line line2"></span>
+                <span className="line line3"></span>
             </div>
-            <ul class="menu-items">
+            <ul className="menu-items">
                 <li>
                   <NavLink
                   className={getClassName}
@@ -66,10 +66,10 @@ function NavBar() {
                   </NavLink>
                 </li>
             </ul>
-            <h1 class="logo">
+            <h1 className="logo">
               <div className='navBar-logo'>
                 <h1 className='navBar-rocket'>🚀</h1>
-                <h2 className='navBar-text'>Агентство инноваций</h2>
+                <h2 className='navBar-text'><NavLink className={"navBar-linl-text static"} to={'/'}>Агентство инноваций</NavLink></h2>
               </div> 
             </h1>
         </div>
