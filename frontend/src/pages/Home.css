@@ -1,0 +1,91 @@
+.profile-container {
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-header h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .profile-header p {
+    color: #888;
+    font-size: 1rem;
+  }
+  
+  .profile-details {
+    margin-bottom: 2rem;
+  }
+  
+  .profile-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .notification-option {
+    margin-bottom: 1.5rem;
+  }
+  
+  .notification-option label {
+    font-size: 1rem;
+    color: #555;
+    margin-right: 1rem;
+  }
+  
+  .email-input {
+    padding: 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .connect-button {
+    background-color: #3f85ff;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .connect-button:hover {
+    background-color: #2f6ee2;
+  }
+  
+  .connected-status {
+    color: green;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .save-button {
+    background-color: #3f85ff;
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .save-button:hover {
+    background-color: #2f6ee2;
+  }
+  
