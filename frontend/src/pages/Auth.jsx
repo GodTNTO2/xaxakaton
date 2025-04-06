@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Auth.css';
 
 function Auth() {
-  const [login, setEmail] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
