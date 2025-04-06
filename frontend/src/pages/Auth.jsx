@@ -12,24 +12,29 @@ function Auth() {
   const { jwtToken } = useSelector(state => state.jwtToken)
   const dispatch = useDispatch()
   
-  const loginUser = async (user) => {
-  const response = await fetch("/auth", {
+  const loginUser = async (password, email) => {
+  const response = await fetch("http://localhost:8000/api/v1/auth/signin", {
     method: "POST",
     headers: {
-      "Content-Type": "application/JSON"
+      "Content-Type": "application/JSON",
+      'Access-Control-Allow-Origin': '*',
     },
-    body: JSON.stringify(user)
-  })
-  const data = await response.json();
-  if (data.user) {
-    await window.localStorage.setItem('token', JSON.stringify(data.token)) 
-    await dispatch(addJwtToken(data.token))
-  }}
+    body: JSON.stringify({
+      password: password,
+      email: email
+    })
+    })
+    const data = await response.json();
+    console.log(data)
+    if (data.data) {
+      await window.localStorage.setItem('token', JSON.stringify(data.detail)) 
+      await dispatch(addJwtToken(data.detail))
+    }}
 
   const handleLogin = (e) => {
     e.preventDefault();
     if (email && password) {
-      loginUser(email)
+      loginUser(password, email)
       navigate('/startups');
     } else {
       alert('Введите логин и пароль');
