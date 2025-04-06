@@ -13,8 +13,10 @@ function Card({arrayData, cardName, cardText}) {
   return (
     <>
       <div className="cards-page fade-in">
+
             <div onClick={pushOnClik} className="cards-grid ">
                 <div key={arrayData.id} className="cards-tile fade-in">
+
                   <img
                     src={arrayData.image || defImage}
                     alt={arrayData.name}
