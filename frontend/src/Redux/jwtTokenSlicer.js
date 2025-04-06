@@ -4,7 +4,7 @@ function pushJwtToken(jwtToken) {
         return jwtToken
 }
 function decoder() {
-    return [true]
+    return [false] // этот переключатель отвечает за то авторизован ли пользователь, он меняет доступ к платформе
 }
 
 
