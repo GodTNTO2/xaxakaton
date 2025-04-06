@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Auth.css';
 
 function Auth() {
-  const [login, setLogin] = useState('');
+  const [login, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -26,8 +26,8 @@ function Auth() {
           <input
             type="email"
             placeholder="Почта"
-            value={login}
-            onChange={(e) => setLogin(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <input
