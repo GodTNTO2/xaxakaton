@@ -7,7 +7,9 @@ function Register() {
   const [password, setPassword] = useState('');
   const [inviteCode, setInviteCode] = useState('');
   const [agreed, setAgreed] = useState(false);
+
   const navigate = useNavigate();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,15 +18,7 @@ function Register() {
     navigate('/startups')
     );
   };
-  const handleLogin = (e) => {
-    e.preventDefault();
-    // Здесь должна быть авторизация (API, проверка и т.п.)
-    if (login && password) {
-      // Пример: переход к главной странице после логина
-      navigate('/startups');
-    } else {
-      alert('Введите логин и пароль');
-    }
+
   };
 
   return (
@@ -56,9 +50,11 @@ function Register() {
             <label>Инвайт-код</label>
             <input
               type="text"
+
               placeholder="Введите ваш инвайт-код (пока как задумка)"
               value={inviteCode}
               onChange={(e) => setInviteCode(e.target.value)}
+
             />
           </div>
           <div className="register-checkbox">
