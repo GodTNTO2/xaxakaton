@@ -5,7 +5,7 @@ import "./NavBar.css"
 const getClassName = ({ isActive }) => (isActive ? 'active' : 'static');
 
 function NavBar() {
- 
+  const isAuth = true
   return (
     <>
       <nav className="navbar">
@@ -25,14 +25,22 @@ function NavBar() {
                   Чаты
                   </NavLink>
                 </li>
-                <li>
+                {!isAuth && <li>
                   <NavLink
                   className="auth"
                   to='/auth'
                   >
                   Авторизация
                   </NavLink>
-                </li>
+                </li>}
+                {isAuth && <li>
+                  <NavLink
+                  className="auth"
+                  to='/user/1'
+                  >
+                  Настройки
+                  </NavLink>
+                </li>}
                 <li>
                   <NavLink
                   className={getClassName}
