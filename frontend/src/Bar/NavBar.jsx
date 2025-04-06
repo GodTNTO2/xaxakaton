@@ -2,12 +2,12 @@ import React, {useEffect} from "react";
 import { NavLink } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import "./NavBar.css"
-import {addJwtToken} from "../Redux/jwtTokenSlicer.js"
+import {addJwtToken, decoderJwtToken} from "../Redux/jwtTokenSlicer.js"
 
 const getClassName = ({ isActive }) => (isActive ? 'active' : 'static');
 
 function NavBar() {
-  const { jwtToken } = useSelector(state => state.jwtToken)
+  const { jwtToken, decodeJwt } = useSelector(state => state.jwtToken)
   const dispatch = useDispatch()
   
   useEffect(() => {
@@ -17,7 +17,6 @@ function NavBar() {
     }
   }, [])
 
-  console.log(jwtToken)
   return (
     <>
       <nav className="navbar">
@@ -37,7 +36,7 @@ function NavBar() {
                   Чаты
                   </NavLink>
                 </li>
-                {!jwtToken && <li>
+                {!decodeJwt[0] && <li>
                   <NavLink
                   className="auth"
                   to='/auth'
@@ -45,12 +44,12 @@ function NavBar() {
                   Авторизация
                   </NavLink>
                 </li>}
-                {jwtToken && <li>
+                {decodeJwt[0] && <li>
                   <NavLink
                   className="auth"
                   to='/user/1'
                   >
-                  Настройки
+                  Профиль
                   </NavLink>
                 </li>}
                 <li>

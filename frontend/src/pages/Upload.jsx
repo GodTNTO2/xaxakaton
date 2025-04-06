@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import './Upload.css';
 
+import { useSelector } from "react-redux";
+
 function Upload() {
   
   const userRole = 'investor'; // 'investor', 'offer', 'startup', Тут надо как-то проверку прикручивать какая роль у пользователя
 
+
+  const { decodeJwt } = useSelector(state => state.jwtToken)
   const [formData, setFormData] = useState({});
 
   const handleChange = e => {
@@ -15,6 +19,14 @@ function Upload() {
     e.preventDefault();
     console.log('Отправка данных:', userRole, formData);
   };
+
+  if (!decodeJwt[0]) {
+    return (
+      <div>
+      Похоже вы не авторизованы!
+    </div>
+    )
+  }
 
   const renderFormFields = () => {
     switch (userRole) {
