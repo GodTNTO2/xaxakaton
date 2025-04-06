@@ -11,6 +11,7 @@ from fastapi.openapi.docs import (
 )
 from starlette.staticfiles import StaticFiles
 
+
 from app.api.v1 import api_router
 from app.core import settings
 from app.core.events import create_start_app_handler, create_stop_app_handler
@@ -36,8 +37,9 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
+
     _app.add_middleware(CorrelationIdMiddleware)
-    _app.logger = CustomizeLogger.make_logger(config_path)
+
     _app.include_router(api_router, prefix=settings.api_v1_prefix)
     _app.mount("/static", StaticFiles(directory="app/static"))
 
