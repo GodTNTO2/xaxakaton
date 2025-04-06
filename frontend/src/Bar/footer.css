@@ -1,27 +1,31 @@
 .footer {
+    position: absolute;
+    bottom: -1;
+    right: 0;
+    width: 100%; /* Футер занимает всю ширину экрана */
     background-color: #dbdbdb;
     color: #aaa;
     text-align: center;
     padding: 30px 20px;
     font-size: 14px;
     border-top: 1px solid #b2b2b2;
-  }
-  
-  .footer-links {
+    
+}
+
+.footer-links {
     margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
     color: #888;
     text-decoration: none;
     transition: color 0.2s;
-  }
-  
-  .footer-links a:hover {
+}
+
+.footer-links a:hover {
     color: #8dc4e8;
-  }
-  
+}
